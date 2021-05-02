@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qtquickcontrols2.conf</file>
+        <file>ui/ongaku.qml</file>
+    </qresource>
+</RCC>

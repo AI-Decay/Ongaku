@@ -15,10 +15,15 @@ if(ANDROID)
     set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
 endif()
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Quick REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Quick REQUIRED)
+find_package(QT NAMES Qt5 COMPONENTS Core Quick Multimedia REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Quick Multimedia REQUIRED)
+
 
 set(PROJECT_SOURCES
+        src/core/base/player/player.cpp
+        src/core/base/player/player.h
+        src/media/audio_player/audio_player.cpp
+        src/media/audio_player/audio_player.h
         src/main/main.cpp
         qml.qrc
 )
@@ -43,7 +48,9 @@ else()
     endif()
 endif()
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+
 target_compile_definitions(ONGAKU
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(ONGAKU
-  PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Quick)
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::Multimedia)

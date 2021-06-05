@@ -22,8 +22,13 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Quick Multimedia REQUIRED)
 set(PROJECT_SOURCES
         src/core/base/player/player.cpp
         src/core/base/player/player.h
+        src/core/base/song/song.h
+        src/core/base/song/metadata.h
         src/media/audio_player/audio_player.cpp
         src/media/audio_player/audio_player.h
+        src/song_queue/song_queue.cpp
+        src/song_queue/song_queue.h
+        src/utils/type_info_name/type_info_name.h
         src/main/main.cpp
         qml.qrc
 )

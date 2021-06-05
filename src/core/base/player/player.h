@@ -1,6 +1,6 @@
 #pragma once
 
-namespace player_base {
+namespace base::player_environment {
 
 enum class player_states { playing, starting, stopping, stopped };
 
@@ -13,4 +13,4 @@ protected:
 
 inline player::~player(){};
 
-} // namespace player_base
+} // namespace base::player_environment

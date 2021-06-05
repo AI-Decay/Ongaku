@@ -1,2 +1,2 @@
 #include "player.h"
-using namespace player_base;
+using namespace base::player_environment;

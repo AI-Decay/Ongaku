@@ -29,6 +29,8 @@ set(PROJECT_SOURCES
         src/song_queue/song_queue.cpp
         src/song_queue/song_queue.h
         src/utils/type_info_name/type_info_name.h
+        src/song_list_model/song_list_model.cpp
+        src/song_list_model/song_list_model.h
         src/main/main.cpp
         qml.qrc
 )

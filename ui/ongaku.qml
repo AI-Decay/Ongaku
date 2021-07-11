@@ -8,10 +8,13 @@ ApplicationWindow {
     visible: true
     title: qsTr("ONGAKU")
 
+    GroupBox {
+        id: songList
+        anchors.fill: parent
+
     ScrollView {
         anchors.fill: parent
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-
         ListView {
             id: listView
             width: parent.width
@@ -25,5 +28,6 @@ ApplicationWindow {
                 }
             }
         }
+    }
     }
 }
